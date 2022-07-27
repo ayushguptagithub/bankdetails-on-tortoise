@@ -12,6 +12,7 @@ class Users(Model):
     ifcr_no = fields.CharField(max_length=50, null=False)
     micr_no = fields.CharField(max_length=50, null=False)
     swift = fields.CharField(max_length=50, null=False)
+    status = fields.IntField()
 
 
 User_Pydantic = pydantic_model_creator(Users, name="User")
